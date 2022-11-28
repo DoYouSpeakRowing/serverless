@@ -3,7 +3,7 @@ export const handler = async (event,context) => {
 	console.log(eventBody.postvar)
 	return {
 		statusCode: 200,
-		Access-Control-Allow-Origin: 'https://doyouspeakrowing.github.io/'
+		Access-Control-Allow-Origin: 'https://doyouspeakrowing.github.io/',
 		body: JSON.stringify({       message: 'Hello World!;'+process.env.TESTVAR+';'+eventBody.postvar,
 		}),
 	}
