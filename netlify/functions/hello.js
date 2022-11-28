@@ -5,8 +5,8 @@ export const handler = async (event,context) => {
 	const body = {
 		sender: { name: "DoYouSpeakRowing",email:"doyouspeakrowing@gmail.com"},
 		to:[{email:process.env.TO_EMAIL}],
-		subject:"test sendmail",
-		htmlContent:"<html><head></head><body><p>Hello,</p>This is my first transactional email sent from Sendinblue.</p></body></html>"
+		subject:"Message from "+eventBody.postvar,
+		htmlContent:"<html><head></head><body><p>Hello,</p>This is . message from "+eventBody.postvar+"</p></body></html>"
 		};
 	const response = await fetch('https://api.sendinblue.com/v3/smtp/email',
 			{  	method: 'post',
