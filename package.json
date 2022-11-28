@@ -1,0 +1,22 @@
+{
+    "title": "serverless mailer",
+    "name": "serverless-mailer",
+    "type":"module",
+    "version": "1.0",
+    "description": "Send smtp email in netlify serverless functions",
+    "keywords": [
+        "smtp",
+        "netlify",
+        "sendinblue"
+    ],
+    "homepage": "https://startbootstrap.com/theme/creative",
+    "license": "MIT",
+    "author": "DoYouSpeakRowing",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/DoYouSpeakRowing/serverless"
+    },
+    "devDependencies": {
+        "node-fetch": "3.3.0"
+    }
+}
