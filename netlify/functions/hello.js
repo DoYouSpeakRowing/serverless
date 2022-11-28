@@ -5,7 +5,7 @@ export const handler = async (event,context) => {
 	console.log({context})
 	return {
 		statusCode: 200,
-		headers : {'Access-Control-Allow-Origin': 'https://doyouspeakrowing.github.io/'},
+		headers : {'Access-Control-Allow-Origin': 'https://doyouspeakrowing.github.io'},
 		body: JSON.stringify({       message: 'Hello World!;'+process.env.TESTVAR+';'+eventBody.postvar,
 		}),
 	}
