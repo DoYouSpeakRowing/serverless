@@ -17,7 +17,7 @@ export const handler = async (event,context) => {
 					}
 			});
 	const data = await response.json();
-	console.log(data); }
+	console.log(data); 
 	return {
 		statusCode: 200,
 		headers : {'Access-Control-Allow-Origin': 'https://doyouspeakrowing.github.io'},
