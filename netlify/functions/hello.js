@@ -1,7 +1,7 @@
 export const handler = async () => {
 	return {
 		statusCode: 200,
-		body: JSON.stringify({       message: 'Hello World!',
+		body: JSON.stringify({       message: 'Hello World!'+process.env.TESTVAR,
 		}),
 	}
 }
