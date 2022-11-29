@@ -1,12 +1,11 @@
 import fetch from 'node-fetch'
 export const handler = async (event,context) => {
 	const eventBody = JSON.parse(event.body)
-	console.log(eventBody.postvar)
 	const body = {
 		sender: { name: "DoYouSpeakRowing",email:"doyouspeakrowing@gmail.com"},
 		to:[{email:process.env.TO_EMAIL}],
-		subject:"Message from "+eventBody.postvar,
-		htmlContent:"<html><head></head><body><p>Hello,</p>This is . message from "+eventBody.postvar+"</p></body></html>"
+		subject:"Message from "+eventBody.name,
+		htmlContent:"<html><head></head><body><p>Hello,</p><p>This is a message from "+eventBody.name+"</p><p>Email: "+eventBody.email+"</p><br><p>"+eventbody.msg+"</p></body></html>"
 		};
 	const response = await fetch('https://api.sendinblue.com/v3/smtp/email',
 			{  	method: 'post',
